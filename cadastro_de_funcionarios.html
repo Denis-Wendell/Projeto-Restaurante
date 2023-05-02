@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Funcionários</title>
+    <title>Cadastro de Funcionário</title>
     <link rel="stylesheet" href="style_cabecalho_index.css" type="text/css">
-    <link rel="stylesheet" href="style_main_index.css" type="text/css">
+    <link rel="stylesheet" href="style_main_cadastro_clientes.css" type="text/css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 </head>
 
 <body>
@@ -22,17 +24,61 @@
     </header>
 
 
+    <main class="cadastro_cliente">
+        <h1 id="titulo_cadastro_cliente">CADASTRO DE FUNCIONÁRIOS</h1>
+        <form action="" method="get">
+            <fieldset class="coluna info_pessoais">
+                <legend>DADOS PESSOAIS:</legend>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome"><br>
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf">
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento"><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+                <label for="telefone">Celular:</label>
+                <input type="text" id="telefone" name="telefone"><br>
+            </fieldset>
+
+            <fieldset class=" coluna info_endereco">
+                <legend>ENDEREÇO:</legend>
+                <label for="endereco">Logradouro:</label>
+                <input type="text" id="endereco" name="endereco">
+                <label for="casa">Nº:</label>
+                <input type="casa" id="casa" name="casa"><br>
+                <label for="cep">Cep:</label>
+                <input type="text" id="cep" name="cep">
+                <label for="complemento_endereco">Complemento:</label>
+                <input type="text" id="complemento_endereco" name="complemento_endereco"><br>
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" name="bairro">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+                <label for="estado">UF:</label>
+                <input type="text" id="estado" name="estado">
+            </fieldset>
+            <div class="clear"></div>
+            <button type="submit">Enviar</button>
+        </form>
 
 
 
 
-
-
-
-
-
-    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>-->
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#cpf').inputmask('999.999.999-99');
+            });
+            $(document).ready(function () {
+                $('#telefone').inputmask('(99) 99999-9999');
+            });
+            $(document).ready(function () {
+                $('#cep').inputmask('99999-999');
+            });
+        </script>
+    </main>
 </body>
 
 </html>
