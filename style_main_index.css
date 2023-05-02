@@ -1,0 +1,140 @@
+#main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Duas colunas com largura igual */
+    gap: 10px;
+    /* Espaçamento entre as colunas */
+}
+
+.coluna {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 100px;
+}
+
+.coluna2 {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 100px;
+    margin-left: -300px;
+
+}
+
+
+.container {
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.container h5 {
+    margin-top: 0;
+    text-align: center;
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: bold;
+}
+
+.container .button-left {
+    color: azure;
+    font-weight: bold;
+    background-color: rgb(250, 94, 4);
+    border-radius: 5px;
+    padding: 7px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border: none;
+    margin-left: 75px;
+
+}
+
+
+.container .button-right {
+    color: azure;
+    font-weight: bold;
+    background-color: rgb(250, 94, 4);
+    border-radius: 5px;
+    padding: 7px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border: none;
+    margin-left: 50px;
+}
+
+.container button:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
+
+.container button:active {
+    background-color: rgb(10, 145, 44);
+}
+
+.titulo {
+    display: inline-block;
+    border-bottom: 3px solid #000;
+    /* Cor e estilo da borda */
+    padding-bottom: 8px;
+    /* Espaçamento entre o título e a linha */
+}
+
+#container-direito {
+    display: flexbox;
+    text-align: end;
+    margin-right: 300px;
+    margin-top: -150px;
+}
+
+#container-direito .button-right {
+    color: azure;
+    font-weight: bold;
+    background-color: rgb(250, 94, 4);
+    border-radius: 5px;
+    padding: 7px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border: none;
+
+}
+
+#container-direito h5 {
+    margin-top: 0;
+    font-size: 17pt;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+    margin-right: 17px;
+}
+
+.container .button-left a {
+    text-decoration: none;
+    color: beige;
+    /* Mantém a cor de texto padrão do elemento pai */
+    /* Outras propriedades de estilo de link, como hover, active e visited, podem ser adicionadas aqui */
+}
+
+.container .button-right a {
+    text-decoration: none;
+    color: beige;
+    /* Mantém a cor de texto padrão do elemento pai */
+    /* Outras propriedades de estilo de link, como hover, active e visited, podem ser adicionadas aqui */
+}
+
+#container-direito .button-right a {
+    text-decoration: none;
+    color: beige;
+    /* Mantém a cor de texto padrão do elemento pai */
+    /* Outras propriedades de estilo de link, como hover, active e visited, podem ser adicionadas aqui */
+}
+
+#container-direito button:hover {
+    background-color: rgb(255, 0, 0);
+    color: black;
+}
+
+#container-direito button:active {
+    background-color: rgb(10, 145, 44);
+}

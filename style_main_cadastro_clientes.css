@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+.coluna {
+    float: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-top: 50px;
+}
+
+.clear {
+    clear: both;
+}
+
+
+legend {
+    text-align: center;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    font-size: 60pt;
+    text-decoration: underline #333333;
+    letter-spacing: 2px;
+}
+
+
+#titulo_cadastro_cliente {
+
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    text-decoration: underline #333333 2.5px solid;
+    letter-spacing: 2px;
+    font-size: 35pt;
+
+
+}
+
+.info_pessoais label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-size: 16pt;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.info_pessoais input {
+    border-radius: 5px;
+    color: black;
+    font-size: 14pt;
+    font-weight: 500;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+button {
+    background: #ff6a14;
+    color: black;
+    padding: 5px 50px 5px 50px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.info_pessoais #nascimento {
+    width: 140px;
+}
+
+.info_pessoais #email {
+    width: 250px;
+}
+
+.info_pessoais #nome,
+#sobrenome {
+    width: 220px;
+}
+
+.info_endereco {
+    border: none;
+
+}
+
+.info_endereco label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-size: 16pt;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.info_endereco input {
+    border-radius: 5px;
+    color: black;
+    font-size: 14pt;
+    font-weight: 500;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 2px;
+    margin-right: 5px;
+}
+
+.info_endereco #casa {
+    width: 56px;
+    text-align: center;
+}
+
+.info_endereco #endereco {
+    width: 300px;
+}
+
+.info_endereco #cep {
+    width: 100px;
+}
+
+.info_endereco #complemento_endereco {
+    width: 220px;
+}
+
+.info_endereco #bairro,
+#cidade {
+    width: 135px;
+}
+
+.info_endereco #estado {
+    width: 45px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+}
+
+body {
+    margin: 0;
+}
+
+form {
+    margin: 0;
+    margin-left: 8px;
+}
+
+input,
+fieldset {
+    box-sizing: border-box;
+}

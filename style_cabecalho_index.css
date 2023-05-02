@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(187, 8, 8);
+}
+
+.main-inicial {
+    width: 100vw;
+    height: 100vh;
+    background: #201b2c;
+    display: flex;
+
+}
+
+.cabeçalho {
+    display: inline-flex;
+}
+
+.cabeçalho img {
+    width: 100vw;
+    height: 15vh;
+}
+
+.topo {
+    display: inline-flex;
+}
+
+.cabeçalho .topo #nome {
+    position: absolute;
+    color: rgb(228, 196, 196);
+    margin-left: 800px;
+    margin-top: 15px;
+    font-size: 28pt;
+    letter-spacing: 3px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.cabeçalho .topo #subnome {
+    position: absolute;
+    color: rgb(228, 196, 196);
+    margin-left: 963px;
+    margin-top: 52px;
+    font-size: 16pt;
+    font-weight: 200;
+    font-family: 'Libre Baskerville', sans-serif;
+    text-align: center;
+    text-shadow: black 4px;
+}
+
+.navbar ul {
+    display: inline-flex;
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: right    ;
+}
+
+.navbar li a {
+    display: inline-flex;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+    background-color: #111;
+}
