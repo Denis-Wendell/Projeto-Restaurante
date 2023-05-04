@@ -1,0 +1,44 @@
+.tipo {
+    display: flex-inline;
+    position: relative;
+    float: left;
+}
+
+.tipo button {
+    background: #ff6a14;
+    border: solid 3px;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 50px 100px 50px 100px;
+
+}
+
+button a {
+    color: black;
+    text-decoration: none;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40vh;
+}
+
+
+.tipo {
+    gap: 10px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.titulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    gap: 250px;
+    /*separação do espaçamento entre os itens*/
+}

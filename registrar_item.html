@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabor Caseiro</title>
     <link rel="stylesheet" href="style_cabecalho_index.css" type="text/css">
-    <link rel="stylesheet" href="style_main_index.css" type="text/css">
+    <link rel="stylesheet" href="main_registrar_item_butao.css">
+    <link rel="stylesheet" href="style_main_registrar_item.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
@@ -20,6 +21,20 @@
             <h5 id="subnome">Restaurante</h5>
         </div>
     </header>
+    <main>
+        <div class="titulos">
+            <span><button id="botao_home"><a href="index.html"><img src="img/home.png"
+                            alt="casa.pg"></a></button></span>
+            <span id="sub_titulo_aba"><strong>Selecione o Tipo do Item</strong></span>
+            <span><button id="botao_perfil"><a href="index.html"><img src="img/user.png"
+                            alt="icon_casa"></a></button></span>
+        </div>
+        <div class="tipo">
+            <button class="comida" onclick="window.location.href = 'registrar_item_comida.html'" ;>Comida</button>
+            <button class="bebida" onclick="window.location.href ='registrar_item_bebida.html'" ;>Bebida</button>
+
+        </div>
+    </main>
 
 
 

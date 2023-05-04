@@ -1,0 +1,21 @@
+.titulos {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 30vw;
+    margin-top: 40px;
+}
+
+.titulos #botao_home,
+#botao_perfil {
+    padding: 5px 15px;
+    background: #ff6a14;
+    border-radius: 8px;
+}
+
+#sub_titulo_aba {
+    font-size: 20pt;
+    text-align: center;
+    text-decoration: underline black 2px solid;
+}
