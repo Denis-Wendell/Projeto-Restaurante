@@ -17,7 +17,7 @@
     <header class="cabeçalho">
         <div class="topo">
             <img id="logo" src="img/imagem de cabecalho.png" alt="imagem de comida">
-            <h1 id="nome">G6 - Sabor Caseiro
+            <h1 id="nome_restaurante">G6 - Sabor Caseiro
             </h1>
             <h5 id="subnome">Restaurante</h5>
         </div>
@@ -25,7 +25,7 @@
 
     <main class="cadastro_cliente">
         <h1 id="titulo_cadastro_cliente">CADASTRO DE CLIENTES</h1>
-        <form action="" method="get">
+        <form id="form_cadastro_cliente">
             <fieldset class="coluna info_pessoais">
                 <legend>DADOS PESSOAIS:</legend>
                 <label for="nome">Nome:</label>
@@ -41,7 +41,7 @@
                 <label for="telefone">Celular:</label>
                 <input type="text" id="telefone" name="telefone"><br>
             </fieldset>
-
+    
             <fieldset class=" coluna info_endereco">
                 <legend>ENDEREÇO:</legend>
                 <label for="endereco">Logradouro:</label>
@@ -61,10 +61,7 @@
             </fieldset>
             <div class="clear"></div>
             <button type="submit">Enviar</button>
-        </form>
-
-
-
+        </form>    
 
         <script>
             $(document).ready(function () {
@@ -75,6 +72,41 @@
             });
             $(document).ready(function () {
                 $('#cep').inputmask('99999-999');
+            });
+            $('#form_cadastro_cliente').submit(function (event) {
+                // Prevent the form from submitting normally
+                event.preventDefault();
+
+                var nomeCompleto = $('#nome').val() + ' ' + $('#sobrenome').val();
+                var endereco = $('#endereco').val() + ', ' + $('#casa').val() + ', ' + $('#cep').val() 
+                + ', ' + $('#bairro').val() + ', ' + $('#cidade').val() + ', ' + $('#estado').val()
+                + ', ' + $('#complemento_endereco').val();
+                
+                // Get the form data
+                var formData = {
+                    nome: nomeCompleto,
+                    cpf: $('#cpf').val(),
+                    dataNascimento: $('#nascimento').val(),
+                    email: $('#email').val(),
+                    telefone: $('#telefone').val(),
+                    endereco: endereco
+                };
+
+                console.log(formData)
+
+                // Send the data using AJAX
+                $.ajax({
+                    type: "POST",
+                    url: "http://localhost:8080/clientes",
+                    data: JSON.stringify(formData),
+                    contentType: "application/json",
+                    success: function () {
+                        alert("Data sent successfully!");
+                    },
+                    error: function () {
+                        alert("An error occurred while sending the data.");
+                    }
+                });
             });
         </script>
     </main>

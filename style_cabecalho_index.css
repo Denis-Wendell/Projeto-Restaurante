@@ -29,7 +29,7 @@
     display: inline-flex;
 }
 
-.cabeçalho .topo #nome {
+.cabeçalho .topo #nome_restaurante {
     position: absolute;
     color: rgb(228, 196, 196);
     margin-left: 800px;
