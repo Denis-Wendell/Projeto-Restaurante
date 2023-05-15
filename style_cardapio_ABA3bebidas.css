@@ -1,0 +1,40 @@
+.Abas_Bebidas{
+    
+    margin-top: 1%;
+    text-align: center;
+    
+}
+
+
+.Abas_Bebidas nav a{
+    
+  
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 50px;
+    margin-left: 50px;
+    font-size: 1.5em;
+    
+
+}
+
+button{
+    border: none;
+    margin-right: -2px;
+
+}
+h1{
+    text-align: center;
+    margin-top: 2%;
+    color: black;
+}
+label {
+    color: black;
+}
+select{
+    color: black;
+}
+option{
+    color: black;
+}
