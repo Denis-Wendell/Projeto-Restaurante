@@ -11,46 +11,82 @@
     <link rel="stylesheet" href="style_main_registrar_comida.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style_main_registrar_item_bebida.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
 
 </head>
+<body>
+    <header class="cabeçalho">
+        <div class="topo">
+            <img id="logo" src="img/imagem de cabecalho.png" alt="imagem de comida">
+            <h1 id="nome_restaurante">G6 - Sabor Caseiro
+            </h1>
+            <h5 id="subnome">Restaurante</h5>
+        </div>
+    </header>
+    <main>
+        <div class="titulos">
+            <span><button id="botao_home"><a href="index.html"><img src="img/home.png" alt="icon_casa"></a></button></span>
+            <span id="sub_titulo_aba"><strong>Registrar Item - Bebida</strong></span>
+            <span><button id="botao_perfil"><a href="index.html"><img src="img/user.png"
+                            alt="icon_casa"></a></button></span>
+        </div>
+        <form id="form_cadastro_bebida">
 
+            <fieldset class="grupo">
 
-<header class="cabeçalho">
-    <div class="topo">
-        <img id="logo" src="img/imagem de cabecalho.png" alt="imagem de comida">
-        <h1 id="nome_restaurante">G6 - Sabor Caseiro
-        </h1>
-        <h5 id="subnome">Restaurante</h5>
-    </div>
-</header>
-<main>
-    <div class="titulos">
-        <span><button id="botao_home"><a href="index.html"><img src="img/home.png" alt="icon_casa"></a></button></span>
-        <span id="sub_titulo_aba"><strong>Registrar Item - Bebida</strong></span>
-        <span><button id="botao_perfil"><a href="index.html"><img src="img/user.png"
-                        alt="icon_casa"></a></button></span>
-    </div>
-    <form>
-
-        <fieldset class="grupo">
-
-            <div class="campo">
-                <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" required>
+                <div class="campo">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div class="campo">
+                    <label for="descricao">Descrição</label>
+                    <textarea rows="6" style="width: 26em" id="descricao" name="descrcao"></textarea>
+                </div>
+                <div class="campo">
+                    <label for="valor">Valor</label>
+                    <input type="text" name="valor" id="valor" required placeholder="R$">
+                </div>
+            </fieldset>
+            <div class="clear"></div>
+            <div class="container">
+                <button type="submit">Enviar</button>
             </div>
-            <div class="campo">
-                <label for="descricao">Descrição</label>
-                <textarea rows="6" style="width: 26em" id="descricao" name="descrcao"></textarea>
-            </div>
-            <div class="campo">
-                <label for="valor">Valor</label>
-                <input type="text" name="valor" id="valor" required placeholder="R$">
-            </div>
-        </fieldset>
+        </form>
 
-    </form>
+        <script>
+            $(document).ready(function () {
+                $('#valor').inputmask('999.99');
+            });
+            $('#form_cadastro_bebida').submit(function (event) {
+                    // Prevent the form from submitting normally
+                    event.preventDefault();
 
-    </body>
+                    // Get the form data
+                    var formData = {
+                        nome: $('#nome').val(),
+                        descricao: $('#descricao').val(),
+                        tipo: "Bebida",
+                        valor: $('#valor').val()
+                    };
 
+                    console.log(formData)
 
+                    // Send the data using AJAX
+                    $.ajax({
+                        type: "POST",
+                        url: "http://localhost:8080/item",
+                        data: JSON.stringify(formData),
+                        contentType: "application/json",
+                        success: function () {
+                            alert("Data sent successfully!");
+                        },
+                        error: function () {
+                            alert("An error occurred while sending the data.");
+                        }
+                    });
+                });
+        </script>
+    </main>
+</body>
 </html>

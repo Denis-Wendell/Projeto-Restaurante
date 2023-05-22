@@ -48,6 +48,18 @@ fieldset {
 
 }
 
+.container {
+    text-align: center;
+}
+
+button {
+    background: #ff6a14;
+    color: black;
+    padding: 5px 50px 5px 50px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
 .campo {
     margin-bottom: 1em;
 }
